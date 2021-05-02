@@ -6,7 +6,7 @@
 * HTML, CSS and JavaScript for public webpages.
 * Bootstrap and jQuery for enhancing the front-end.
 * Flask for the back-end server.
-* SQLAlchemy for storing tasks as database.
+* SQLAlchemy for storing tasks in database.
 
 ## Quick Start
 * Install the Packages <br><br>
