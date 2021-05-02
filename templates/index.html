@@ -30,7 +30,7 @@
         <img src="{{ url_for('static', filename='Images/rocket.png') }}" id="rocket" alt="">
     </section>
     <div class="sec" id="sec">
-        <h2>EDUCARE</h2>
+        <h2>Code Crunchers</h2>
         <div class="route">
             <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><a href="/todo"><img
                         src="{{ url_for('static', filename='Images/Saly-10.png') }}" alt="" id="productive"
@@ -39,7 +39,10 @@
                         src="{{ url_for('static', filename='Images/Saly-13.png') }}" alt="" id="lazy"
                         class="motion"></a></div>
         </div>
-
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; color: white;">
+            <h1 style="padding-right: 100px; margin-right: 20px;">Feeling Productive</h1>
+            <h1 style="padding-right: 50px;">Feeling Lazy</h1>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
