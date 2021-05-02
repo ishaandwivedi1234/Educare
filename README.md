@@ -14,3 +14,6 @@
 * Host the flask server by executing <br><br>
 ```python app.py```<br><br>
 By default, the server will be live at [http://localhost:5000/](http://localhost:5000/) in debug mode. Other settings can be modified as per requirement.
+
+## Credits
+Made with ❤️ by <b>CodeCrunchers</b>.
