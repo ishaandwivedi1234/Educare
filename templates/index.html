@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+
+<body>
+    <header>
+        <a class="logo">Logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <!-- <li><a href="/todo">Work</a></li> -->
+            <li><a href="/team">Team</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="{{ url_for('static', filename='Images/stars.jpg') }}" id="stars" alt="">
+        <img src="{{ url_for('static', filename='Images/MOON.png') }}" id="moon" alt="">
+        <img src="{{ url_for('static', filename='Images/F_M.png') }}" id="mountain_front" alt="">
+        <h2 id="text">Code Crunchers</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="{{ url_for('static', filename='Images/rocket.png') }}" id="rocket" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Code Crunchers</h2>
+        <div class="route">
+            <a href="/todo"><img src="{{ url_for('static', filename='Images/Saly-10.png') }}" alt="" id="productive" class="motion"></a>
+            <a href="#"><img src="{{ url_for('static', filename='Images/Saly-13.png') }}" alt="" id="lazy" class="motion"></a>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt nam ab reiciendis sit, facilis ipsum
+            ducimus autem, rem ea excepturi doloremque fugiat assumenda porro. Dolorum, reprehenderit vel praesentium
+            nisi commodi libero quod quasi eveniet repellendus eius sit totam explicabo dolor voluptatum quaerat
+            adipisci perferendis deserunt ut deleniti labore officia, voluptatem nihil provident. Debitis maiores quidem
+            eos repudiandae nemo, ut natus placeat quos.
+        </p><br><br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+        <br><br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+        <br><br>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt nam ab reiciendis sit, facilis ipsum
+            ducimus autem, rem ea excepturi doloremque fugiat assumenda porro. Dolorum, reprehenderit vel praesentium
+            nisi commodi libero quod quasi eveniet repellendus eius sit totam explicabo dolor voluptatum quaerat
+            adipisci perferendis deserunt ut deleniti labore officia, voluptatem nihil provident. Debitis maiores quidem
+            eos repudiandae nemo, ut natus placeat quos.
+        </p><br><br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+        <br><br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+        <br><br>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam deleniti quo consequuntur nisi itaque
+            optio adipisci distinctio! Unde deleniti reiciendis inventore quibusdam, incidunt illo excepturi? Aperiam
+            exercitationem repellendus provident, porro dolorem doloribus obcaecati quasi esse nobis quae odit vel eum
+            ipsa?
+            Labore sunt obcaecati libero quisquam esse voluptate incidunt!</p>
+
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let rocket = document.getElementById('rocket');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        let mountain_front = document.getElementById('mountain_front');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.25 + 'px';
+            rocket.style.left = value * 1.5 + 'px';
+            mountain_front.style.right = value * 0 + 'px';
+            text.style.marginRight = value * 1.75 + 'px';
+            text.style.marginBottom = value * 0.15 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+        });
+    </script>
+</body>
+
+</html>

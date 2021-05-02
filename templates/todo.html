@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block top %}
+<title>TODO</title>
+{% endblock top %}
+{% block body %}
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="{{ url_for('static', filename='Images/Saly-26.png') }}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-secondary mx-1" aria-current="page" href="/"><i class="fa fa-angle-left"></i> Back</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-secondary mx-1" aria-current="page" href="/todo">Refresh <i class="fa fa-refresh"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <h2>Add Tasks</h2>
+        <form action="/todo" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <input type="text" class="form-control" name="desc" id="desc">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="container my-3">
+        <h2>Your Tasks</h2>
+
+        {% if allTasks|length==0 %}
+        <div class="alert alert-primary" role="alert">
+            Woohoo, no work due soon!
+        </div>
+        {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">SNo.</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in allTasks %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td style="max-width: 100px; overflow: auto; height: fit-content;">{{task.title}}</td>
+                    <td style="max-width: 250px; overflow: auto; height: fit-content;">{{task.desc}}</td>
+                    <td>{{task.date_created}}</td>
+                    <td>
+                        <a href="/update/{{task.sno}}" type="button"
+                            class="btn btn-outline-success btn-sm mx-1">Update</a>
+                        <a href="/delete/{{task.sno}}" type="button" class="btn btn-danger btn-sm mx-1">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        {% endif %}
+    </div>
+{% endblock body %}
