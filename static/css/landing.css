@@ -13,6 +13,10 @@ body{
     overflow-x: hidden;
 }
 
+h2, h3{
+    color: #fff;
+}
+
 .card{
     margin: 50px;
 }

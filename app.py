@@ -24,6 +24,14 @@ def hello_world():
 def team():
     return render_template('team.html')
 
+@app.route('/spotify', methods=['GET', 'POST'])
+def spotify():
+    return render_template('spotify.html')
+
+@app.route('/pomodoro', methods=['GET', 'POST'])
+def pomodoro():
+    return render_template('pomodoro.html')
+
 @app.route('/about', methods=['GET', 'POST'])
 def about():
     return render_template('about.html')

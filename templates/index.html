@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDUCARE</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Images/favicon.ico') }}">
 </head>
 
 <body>
@@ -28,32 +30,20 @@
         <img src="{{ url_for('static', filename='Images/rocket.png') }}" id="rocket" alt="">
     </section>
     <div class="sec" id="sec">
-        <h2>EDUCARE</h2>
+        <h2>Code Crunchers</h2>
         <div class="route">
-            <a href="/todo"><img src="{{ url_for('static', filename='Images/Saly-10.png') }}" alt="" id="productive" class="motion"></a>
-            <a href="#"><img src="{{ url_for('static', filename='Images/Saly-13.png') }}" alt="" id="lazy" class="motion"></a>
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><a href="/todo"><img
+                        src="{{ url_for('static', filename='Images/Saly-10.png') }}" alt="" id="productive"
+                        class="motion"></a></div>
+            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"><a href="/spotify"><img
+                        src="{{ url_for('static', filename='Images/Saly-13.png') }}" alt="" id="lazy"
+                        class="motion"></a></div>
         </div>
-        
-    </div>
-    <script>
-        let stars = document.getElementById('stars');
-        let moon = document.getElementById('moon');
-        let rocket = document.getElementById('rocket');
-        let btn = document.getElementById('btn');
-        let text = document.getElementById('text');
-        let mountain_front = document.getElementById('mountain_front');
 
-        window.addEventListener('scroll', function () {
-            let value = window.scrollY;
-            stars.style.left = value * 0.25 + 'px';
-            moon.style.top = value * 1.25 + 'px';
-            rocket.style.left = value * 1.5 + 'px';
-            mountain_front.style.right = value * 0 + 'px';
-            text.style.marginRight = value * 1.75 + 'px';
-            text.style.marginBottom = value * 0.15 + 'px';
-            btn.style.marginTop = value * 1.5 + 'px';
-        });
-    </script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>
